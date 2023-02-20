@@ -2245,7 +2245,9 @@ async function IndexSearch(e, r) {
 const DEFAULT_OPTIONS = {
   previewLength: 62,
   buttonLabel: "Search",
-  placeholder: "Search docs"
+  placeholder: "Search docs",
+  allow: [],
+  ignore: []
 };
 function SearchPlugin(e) {
   const r = {

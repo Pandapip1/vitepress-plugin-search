@@ -10,7 +10,7 @@ See: https://github.com/isaacs/node-glob/issues/167`);if(!(this instanceof H))re
   const PREVIEW_LOOKUP = ${JSON.stringify(i)};
   const Options = ${JSON.stringify(r)};
   const data = { INDEX_DATA, PREVIEW_LOOKUP, Options };
-  export default data;`;return console.log("  🔎 Done."),h}const DEFAULT_OPTIONS={previewLength:62,buttonLabel:"Search",placeholder:"Search docs"};function SearchPlugin(e){const r={...DEFAULT_OPTIONS,...e};let n;const i="virtual:search-data",s="\0"+i;return{name:"vite-plugin-search",enforce:"pre",configResolved(o){n=o},config:()=>({resolve:{alias:{"./VPNavBarSearch.vue":"vitepress-plugin-search/Search.vue"}}}),async resolveId(o){if(o===i)return s},async load(o){if(o===s)return n.build.ssr?`const INDEX_DATA = { };
+  export default data;`;return console.log("  🔎 Done."),h}const DEFAULT_OPTIONS={previewLength:62,buttonLabel:"Search",placeholder:"Search docs",allow:[],ignore:[]};function SearchPlugin(e){const r={...DEFAULT_OPTIONS,...e};let n;const i="virtual:search-data",s="\0"+i;return{name:"vite-plugin-search",enforce:"pre",configResolved(o){n=o},config:()=>({resolve:{alias:{"./VPNavBarSearch.vue":"vitepress-plugin-search/Search.vue"}}}),async resolveId(o){if(o===i)return s},async load(o){if(o===s)return n.build.ssr?`const INDEX_DATA = { };
 				const PREVIEW_LOOKUP = {};
 				const Options = ${JSON.stringify(r)};
 				const data = { INDEX_DATA, PREVIEW_LOOKUP, Options };
